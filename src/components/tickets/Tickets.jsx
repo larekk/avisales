@@ -42,7 +42,7 @@ const Tickets = () => {
 
   return (
     <section className={styles.tickets} aria-label="Available tickets">
-      {!isComplete ? (
+      {!isComplete && tickets.length > 0 ? (
         <div className={styles.miniLoader}>
           Грузим оставшиеся билеты...
           <ClipLoader className={styles.miniiLoader} color="#3498db" size={10} />

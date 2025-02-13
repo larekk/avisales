@@ -9,8 +9,11 @@ const filterTickets = (tickets, filters) => {
     return tickets
   }
 
-  if (!filters.withoutTransfer && !filters.oneTransfer && !filters.twoTransfers && !filters.threeTransfers) {
-    return tickets
+  const noFiltersSelected =
+    !filters.withoutTransfer && !filters.oneTransfer && !filters.twoTransfers && !filters.threeTransfers
+
+  if (noFiltersSelected) {
+    return [] // Возвращаем пустой массив, если нет активных фильтров
   }
 
   return tickets.filter((ticket) => {
@@ -43,7 +46,6 @@ export const getFilteredAndSortedTickets = createSelector(
   [selectTickets, selectFilters, selectActiveTab],
   (tickets, filters, activeTab) => {
     const filteredTickets = filterTickets(tickets, filters)
-
     return sortTickets(filteredTickets, activeTab)
   }
 )
