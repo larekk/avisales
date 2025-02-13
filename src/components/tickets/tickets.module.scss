@@ -1,13 +1,10 @@
 .loader{
-  width: 100%;
-  margin-top:90px;
-  margin-left: 39%;
+  max-width: 100%;
+  text-align: center;
+  margin-right: 103px;
+  margin-top: 100px;
 }
 
-.miniLoader{
-  width: 100%;
-  margin-left: 20%;
-}
 
 .tickets {
   display: flex;
@@ -15,9 +12,11 @@
   gap: 15px;
 
   .miniLoader{
-    width: 100%;
-    margin-left: 20%;
+    max-width: 100%;
+    text-align: center;
+    margin-right: 103px;
   }
+
 
   article {
     border-radius: 10px;

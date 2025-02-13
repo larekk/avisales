@@ -1,0 +1,14 @@
+body{
+    background-color: #F3F7FA;
+}
+
+.app {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: "Open Sans", serif;
+
+    .content {
+        flex: 1;
+    }
+}

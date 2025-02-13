@@ -1,16 +1,25 @@
 import { combineReducers } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
 
-import cashReducer from './cashReducer'
-import customersReducer from './customersReducer'
+import checkboxesReducer from './checkboxReducer'
+import tabsReducer from './tabsReducer'
+import ticketsReducer from './ticketsReducer'
 
-const rootReducers = combineReducers({
-  cashReducer,
-  customersReducer,
+const rootReducer = combineReducers({
+  tabs: tabsReducer,
+  checkboxes: checkboxesReducer,
+  tickets: ticketsReducer,
 })
 
 const store = configureStore({
-  reducer: rootReducers,
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      immutableCheck: false,
+      serializableCheck: false,
+    }),
+  // eslint-disable-next-line no-undef
+  devTools: process.env.NODE_ENV !== 'production',
 })
 
 export default store
