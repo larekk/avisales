@@ -13,7 +13,7 @@ const filterTickets = (tickets, filters) => {
     !filters.withoutTransfer && !filters.oneTransfer && !filters.twoTransfers && !filters.threeTransfers
 
   if (noFiltersSelected) {
-    return [] // Возвращаем пустой массив, если нет активных фильтров
+    return []
   }
 
   return tickets.filter((ticket) => {

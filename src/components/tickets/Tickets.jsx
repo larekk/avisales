@@ -22,7 +22,7 @@ const Tickets = () => {
     if (searchId && !isComplete) {
       const fetchData = () => dispatch(fetchTickets(searchId))
 
-      const interval = setInterval(fetchData, 3000)
+      const interval = setInterval(fetchData, 500)
 
       return () => clearInterval(interval)
     }

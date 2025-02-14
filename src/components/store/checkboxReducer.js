@@ -1,9 +1,9 @@
 const initialState = {
-  allCheckboxes: false,
-  withoutTransfer: false,
-  oneTransfer: false,
-  twoTransfers: false,
-  threeTransfers: false,
+  allCheckboxes: true,
+  withoutTransfer: true,
+  oneTransfer: true,
+  twoTransfers: true,
+  threeTransfers: true,
 }
 
 const ALL_CHECKBOXES_CHECKED = 'ALL_CHECKBOXES_CHECKED'
